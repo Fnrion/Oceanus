@@ -4,20 +4,18 @@ project:
 website:
   navbar:
     logo: "Picture/Fish.png"
-    background: success
+    background: primary
     left:
-      - text: "Hands-on Exerciese"
+      - text: "Team"
         menu:
-          - text: "Hands-on Exercise 1"
-            href: "Hands-on_Ex/Hands-on_Ex01/Hands-on_Ex01.html"
-      - text: "In-class Exercise"  
+          - text: "Member"
+            href: "Team/Member.html"
+          - text: "MoM"
+            href: "Team/MoM.html"
+      - text: "Proposal"  
         menu: 
-          - text: "In-class Exercise 1"
-            href: "In-class_Ex/In-class_Ex01/In-class_Ex01.html"
-      - text: "Take-home Exercise"  
-        menu: 
-          - text: "Take-home Exercise 1"
-            href: "Take-Home_Ex/Take-home_Ex01/Take-home_Ex01.html"
+          - text: "Proposal"
+            href: "Proposal/Proposal.html"
     right:
       - about.qmd
     tools:
@@ -29,11 +27,12 @@ website:
             href:  https://github.com/Fnrion/Oceanus
           - text: Report a Bug
             href:  https://bugs.com
+      
 format:
   html:
     theme:
-      light: Journal
-      dark: cosmo
+      light: Cerulean
+      dark: Sandstone
     toc: true
     fontsize: 0.9em
     linestretch: 1.6

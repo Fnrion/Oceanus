@@ -4,14 +4,14 @@
     "href": "Proposal/Proposal.html",
     "title": "Proposal",
     "section": "",
-    "text": "dhsiaohdknsaohdshaojhdosahodhosaihdoshaoihdosahodhsoahdosihaodhosahids"
+    "text": "d"
   },
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Oceanus",
+    "title": "",
     "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\n\n1 + 1\n\n[1] 2"
+    "text": "Short Description: \nOur project aims to develop a Shiny-based web application to analyze and visualize the dynamic corporate structures and business transactions within the Oceanus commercial fishing industry, specifically addressing the VAST Challenge 2024 Mini-Challenge 3. The application will focus on uncovering the impact of SouthSeafood Express Corp’s illegal fishing activities and visualizing the resulting changes in the business network. The motivation is to aid FishEye analysts in identifying key individuals and companies involved in illegal activities, understanding their influence, and detecting suspicious transactions."
   },
   {
     "objectID": "about.html",

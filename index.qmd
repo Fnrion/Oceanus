@@ -1,11 +1,16 @@
 ---
-title: "Oceanus"
+title: ""
 ---
 
-This is a Quarto website.
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+::: {.column-page-inset}
+**Short Description:** 
 
-```{r}
-1 + 1
-```
+Our project aims to develop a Shiny-based web application to analyze and visualize the dynamic corporate structures and business transactions within the Oceanus commercial fishing industry, specifically addressing the VAST Challenge 2024 Mini-Challenge 3. The application will focus on uncovering the impact of SouthSeafood Express Corp's illegal fishing activities and visualizing the resulting changes in the business network. The motivation is to aid FishEye analysts in identifying key individuals and companies involved in illegal activities, understanding their influence, and detecting suspicious transactions. 
+
+
+:::
+
+::: column-screen
+![](Picture/Ocean2.jpeg)
+:::
