@@ -95,11 +95,11 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-team">    
         <li>
-    <a class="dropdown-item" href="../Team/Member.html">
+    <a class="dropdown-item" href="../Team/Member/Member.html">
  <span class="dropdown-text">Member</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../Team/MoM.html">
+    <a class="dropdown-item" href="../Team/MoM/MoM.html">
  <span class="dropdown-text">MoM</span></a>
   </li>  
     </ul>
@@ -174,7 +174,27 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>d</p>
+<p><strong>Motivation:</strong>&nbsp;</p>
+<p>The commercial fishing industry in Oceanus is marked by dynamic changes, including new startups, mergers, and acquisitions. Recently, the illegal activities of SouthSeafood Express Corp have highlighted the need for robust tools to monitor and analyze these corporate structures. FishEye International, dedicated to preserving the marine ecosystem, requires advanced visualization tools to identify key influencers, detect suspicious activities, and understand the broader market impacts of such illegal actions.&nbsp;</p>
+<p>Our project aims to develop a web-enabled visual analytics application to help FishEye analysts visualize and understand temporal changes in corporate structures and business transactions. By providing clear visual representations of corporate networks and business transactions, the application will enable analysts to identify potential red flags, examine typical and atypical transactions, and understand how corporate influence and ownership evolve over time. This will support FishEye’s mission to prevent illegal fishing and ensure the sustainability of Oceanus’s marine ecosystem.&nbsp;</p>
+<p>&nbsp;</p>
+<p><strong>Tasks and Questions:</strong>&nbsp;</p>
+<p>This is based on the tasks and questions from VAST Challenge 2024 Mini Challenge 3 or MC3.&nbsp;</p>
+<p>To support FishEye International in stopping illegal fishing, we aim to develop visualization tools that integrate with CatchNet to identify influential individuals and companies within business networks. These tools will help highlight temporal patterns and changes in corporate structures, especially given the varied and changing shareholder and ownership relationships.&nbsp;</p>
+<p><strong>Visualize Changes in Corporate Structures Over Time:</strong>Develop a visual analytics approach to highlight temporal patterns and changes in corporate structures. Identify key individuals and entities involved in these changes.&nbsp;</p>
+<p><strong>Analyze Business Transactions:</strong>Find and display examples of typical and atypical business transactions (e.g., mergers, acquisitions). Infer motivations behind these activities.&nbsp;</p>
+<p><strong>Examine Influence Dynamics:</strong>Create a visual approach to examine how the influence of a company changes over time. Infer ownership or influence within the network.&nbsp;</p>
+<p><strong>Identify Network Changes Related to SouthSeafood Express Corp:</strong> Visualize the network associated with SouthSeafood Express Corp and analyze changes due to their illegal fishing behavior. Identify companies that benefited from their legal troubles and detect other suspicious transactions.&nbsp;</p>
+<p><strong>3. Methodology</strong>&nbsp;</p>
+<p>The initial approach involves identifying abnormalities in the data, followed by necessary data wrangling and cleaning. We will conduct initial data exploration and analysis to understand the dataset better. Once this is complete, we will proceed to address each task individually.&nbsp;</p>
+<p><strong>Task 1: Visualize Changes in Corporate Structures Over Time</strong>&nbsp;</p>
+<p>For this task, we are planning to create network graphs of the corporate network that would change over time as new events occur. The main visualization techniques are still under discussion, but the primary purpose is to highlight temporal changes in corporate structures based on individuals related to these corporations and potentially their familial relationships. Currently, the idea is to have a visualization that looks like an evolving network graph with a time slider to represent temporal changes. This will allow analysts to dynamically observe how corporate relationships evolve over time and identify significant shifts or anomalies.&nbsp;</p>
+<p><strong>Task 2: Analyze Business Transactions</strong>&nbsp;</p>
+<p>For this task, we will focus on business transactions such as mergers or acquisitions. We plan to look at the edges representing beneficial ownership or shareholdership and analyze the start and end dates to determine which transactions are typical and which are atypical. The visualization approach involves using edge weights to indicate the significance of the transaction, with thicker lines representing more substantial transactions, such as beneficial ownership. This will help in visualizing the types of events and identifying unusual transaction patterns that could indicate suspicious activities.&nbsp;</p>
+<p><strong>Task 3: Examine Influence Dynamics</strong>&nbsp;</p>
+<p>For this task, we will use centrality measures such as betweenness centrality and closeness centrality to measure the influence of a company. Higher betweenness centrality indicates that a company acts as a bridge in managing relationships and transactions between other companies, suggesting high influence. Similarly, high closeness centrality indicates that a company is close to many others, facilitating efficient communication and resource flow. We will create visualizations where node sizes represent centrality scores, with potentially a slider to measure changes in influence over time. This will help identify key influencers and track how their influence evolves in response to significant events.&nbsp;</p>
+<p><strong>Task 4: Identify Network Changes Related to SouthSeafood Express Corp</strong>&nbsp;</p>
+<p>For this task, we will identify and analyze the network associated with SouthSeafood Express Corp, visualizing network changes before and after illegal fishing behavior. We will start by creating network graphs to visualize entities and relationships connected to SouthSeafood Express Corp.&nbsp;By filtering the graph to include only relevant nodes and edges, we can highlight key nodes such as shareholders and partners. We will compare the network before and after the discovery of illegal activities to identify significant changes. This will help in understanding how the network and related companies were impacted by SouthSeafood Express Corp’s illegal activities and identify any related suspicious transactions.&nbsp;</p>
 
 
 

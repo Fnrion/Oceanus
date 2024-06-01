@@ -9,9 +9,9 @@ website:
       - text: "Team"
         menu:
           - text: "Member"
-            href: "Team/Member.html"
+            href: "Team/Member/Member.html"
           - text: "MoM"
-            href: "Team/MoM.html"
+            href: "Team/MoM/MoM.html"
       - text: "Proposal"  
         menu: 
           - text: "Proposal"
