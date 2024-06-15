@@ -1,5 +1,19 @@
 ---
 title: "Member"
+author: Zhang Chenbin, Zou Jiaxun
+date: "May 30, 2024"
+data-modified: "last-modified"
+execute: 
+  eval: true
+  echo: true
+  warning: false
+  freeze: true
 ---
 
-Test
+# **About the team**
+
+Hello! We are ***Chenbin*** and ***Jiaxun*** from MITB at SMU hoping to bring data to live through meaningful visaulisation approaches.
+
+Prof. Kam Tin Seong, with his profound expertise, has been an invaluable mentor, providing clear guidance in our data analysis projects.
+
+![](images/clipboard-3522929115.png){fig-align="center" width="211"}

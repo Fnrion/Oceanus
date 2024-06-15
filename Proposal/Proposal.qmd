@@ -18,7 +18,7 @@ execute:
 
 The commercial fishing industry in Oceanus is marked by dynamic changes, including new startups, mergers, and acquisitions. Recently, the illegal activities of SouthSeafood Express Corp have highlighted the need for robust tools to monitor and analyze these corporate structures. FishEye International, dedicated to preserving the marine ecosystem, requires advanced visualization tools to identify key influencers, detect suspicious activities, and understand the broader market impacts of such illegal actions. 
 
-Our project aims to develop a web-enabled visual analytics application to help FishEye analysts visualize and understand temporal changes in corporate structures and business transactions. By providing clear visual representations of corporate networks and business transactions, the application will enable analysts to identify potential red flags, examine typical and atypical transactions, and understand how corporate influence and ownership evolve over time. This will support FishEye's mission to prevent illegal fishing and ensure the sustainability of Oceanus's marine ecosystem. 
+Our project aims to develop a web-enabled visual analytics shiny app to help FishEye analysts visualize and understand temporal changes in corporate structures and business transactions. By providing clear visual representations of corporate networks and business transactions, the application will enable analysts to identify potential red flags, examine typical and atypical transactions, and understand how corporate influence and ownership evolve over time. This will support FishEye's mission to prevent illegal fishing and ensure the sustainability of Oceanus's marine ecosystem. 
 
 ## 3. **Tasks and Questions**
 
@@ -40,11 +40,13 @@ The initial approach involves identifying abnormalities in the data, followed by
 
 **Task 1: Visualize Changes in Corporate Structures Over Time** 
 
-DHUSIAVDLSAvfldvalfD
+Initially, data preparation involves cleaning and formatting date fields and entity identifiers. Identifying the most active entities is achieved by aggregating transaction counts per source, focusing on the top entities for a more detailed analysis. Visualizations include time series plots to track transaction trends over time, heatmaps to highlight periods of high activity, bar charts to emphasize the most active nodes, and faceted plots to compare transaction counts across different entities over selected timeframes. These visualizations enable analysts to detect patterns and potential irregularities in the market, offering a clear view of dynamic changes and helping guide strategic decisions. 
 
 **Task 2: Analyze Business Transactions** 
 
-CVXHZJVCJDGSUAGLD
+![](images/clipboard-1293413840.png)\
+
+To analyze and visualize business relationships and transaction patterns effectively, the methodology employed combines data structuring, network visualization, and interactive exploration. Using igraph and ggraph, a directed graph is created to display entities and their relationships, where nodes represent entities such as companies and individuals, and edges represent transactions or roles like mergers and acquisitions, color-coded for distinction. This is augmented by visNetwork for an interactive visualization that enables dynamic exploration of the network, highlighting connections and facilitating the identification of key influencers and transaction flows. Additionally, a heatmap created with ggplot2 visualizes transaction frequency over time, helping to spot trends and anomalies.
 
 **Task 3: Examine Influence Dynamics** 
 
