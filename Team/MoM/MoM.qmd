@@ -88,7 +88,7 @@ Zhang Chenbin, Zou Jiaxun 
 
 ![](images/clipboard-1686605387.png){fig-align="center" width="436"}
 
-# 3rd Meeting Details
+# 3rd Meeting Details （6.1）
 
 ## Attendees:
 
@@ -96,33 +96,49 @@ Zhang Chenbin, Zou Jiaxun 
 
 ## Date:
 
-16:30 – 17:30 
+2:30pm – 5:00pm 
 
 ## Objective: 
 
--   Check the M1, M2, M3 dataset and list the object part of part of each dataset to ensure all necessary components are included for a comprehensive analysis. 
+-   Review the Mini-Challenge 3 provided by the competition and map out key methodological steps needed to address the tasks. . 
 
 <!-- -->
 
--   Based on senior project proposal, draft the project objection 
+-   Discuss and develop a structured approach to visualize changes in corporate structures and their relationships over time. 
 
 <!-- -->
 
--   Create the quarto and usethis::github 
+-   Outline a plan for creating visual analytics that will identify influential people and companies within the Oceanus business network, especially focusing on those involved in illegal fishing activities. 
+
+<!-- -->
+
+-   Prepare a preliminary analysis framework to identify typical and atypical transactions and understand motives behind them. 
 
 ## Action items: 
 
-1.  Quarto built 
+1.  Methodology for Identifying Influence and Ownership 
 
 <!-- -->
 
-2.  Mission Select (M3)  
+2.  Analysis of SouthSeafood Express Corp Network 
+
+<!-- -->
+
+2.  Preliminary Data Analysis 
+
+## Agenda for Next Meeting: 
+
+1.  Deep dive into the preliminary findings from the data analysis.  
+
+<!-- -->
+
+2.  Discuss and resolve any issues encountered during the data validation process. 
 
 ## Next meeting date:
 
-25th May 2024 Workshop 
+8th Jun 2024 
 
-# 4th Meeting Details 
+# 4th Meeting Details (6.8)
 
 ## Attendees:
 
@@ -130,28 +146,32 @@ Zhang Chenbin, Zou Jiaxun 
 
 ## Date:
 
-16:30 – 17:30 
+2:30pm – 5:00pm 
 
 ## Objective: 
 
--   Check the M1, M2, M3 dataset and list the object part of part of each dataset to ensure all necessary components are included for a comprehensive analysis. 
+-   Review the progress on the development of the visual analytics dashboard prototype. 
 
 <!-- -->
 
--   Based on senior project proposal, draft the project objection 
+-   Evaluate preliminary findings from the detailed analysis of the data, focusing on identifying patterns and relationships relevant to illegal fishing activities. 
 
 <!-- -->
 
--   Create the quarto and usethis::github 
+-   Address any technical or data-related issues encountered during the validation and analysis phase. 
 
 ## Action items: 
 
-1.  Quarto built 
+1.  Presentation of Preliminary Findings 
 
 <!-- -->
 
-2.  Mission Select (M3)  
+2.  Technical Challenges and Solutions 
+
+<!-- -->
+
+3.  Further Data Analysis 
 
 ## Next meeting date:
 
-25th May 2024 Workshop 
+Before Poster day
