@@ -20,7 +20,7 @@ The commercial fishing industry in Oceanus is marked by dynamic changes, includi
 
 Our project aims to develop a web-enabled visual analytics shiny app to help FishEye analysts visualize and understand temporal changes in corporate structures and business transactions. By providing clear visual representations of corporate networks and business transactions, the application will enable analysts to identify potential red flags, examine typical and atypical transactions, and understand how corporate influence and ownership evolve over time. This will support FishEye's mission to prevent illegal fishing and ensure the sustainability of Oceanus's marine ecosystem. 
 
-## 3. **Tasks and Questions**
+## **3.** **Tasks and Questions**
 
 This is based on the tasks and questions from VAST Challenge 2024 Mini Challenge 3. 
 
