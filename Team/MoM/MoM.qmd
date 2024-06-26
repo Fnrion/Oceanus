@@ -10,15 +10,13 @@ execute:
   freeze: true
 ---
 
-# **1st Meeting Details** 
+# **1st Meeting Details**(5.18)
 
-## Attendees: 
+## Attendees:
 
 Zhang Chenbin, Zou Jiaxun 
 
-## Date: 
-
-18TH May 2024 
+## Date:
 
 16:30 – 17:30 
 
@@ -26,194 +24,134 @@ Zhang Chenbin, Zou Jiaxun 
 
 -   Check the M1, M2, M3 dataset and list the object part of part of each dataset to ensure all necessary components are included for a comprehensive analysis. 
 
-```{=html}
 <!-- -->
-```
+
 -   Based on senior project proposal, draft the project objection 
 
-```{=html}
 <!-- -->
-```
+
 -   Create the quarto and usethis::github 
 
 ## Action items: 
 
 1.  Quarto built 
 
-```{=html}
 <!-- -->
-```
+
 2.  Mission Select (M3)  
 
-## Next meeting date: 
+## Next meeting date:
 
 25th May 2024 Workshop 
 
-------------------------------------------------------------------------
+# 2nd Meeting Details(5.31)
 
-2nd Meeting Details 
+## Attendees:
 
-Attendees: Zhang Chenbin, Zou Jiaxun 
+Zhang Chenbin, Zou Jiaxun 
 
-Date: 31st May 2024 
+## Date:
 
-Time: 2:30pm – 5:00pm 
+2:30pm – 5:00pm  
 
- 
-
-Objective: 
+## Objective: 
 
 -   During the first meeting, we had discussed on using M3 JSON dataset to perform our initial analysis and visualization.  
 
-```{=html}
 <!-- -->
-```
+
 -   Netlify linked, choose the layout of whole project, settle category 
 
-```{=html}
 <!-- -->
-```
+
 -   Motivation and Methodology carding 
 
-```{=html}
 <!-- -->
-```
+
 -   Shiny App built: to be learn in next class 
 
-```{=html}
 <!-- -->
-```
+
 -   Each member sha0res data observations and findings for developing the research objectives. 
 
-Action items:  
+## Action items: 
 
-1.  Proposal created 
+1.  Quarto built 
 
-```{=html}
 <!-- -->
-```
-2.  Link with Netlify (https://oceanus-fish.netlify.app) 
 
-```{=html}
+2.  Mission Select (M3)  
+
+## Next meeting date:
+
+1st Jun 2024 Workshop 
+
+![](images/clipboard-1686605387.png){fig-align="center" width="436"}
+
+# 3rd Meeting Details
+
+## Attendees:
+
+Zhang Chenbin, Zou Jiaxun 
+
+## Date:
+
+16:30 – 17:30 
+
+## Objective: 
+
+-   Check the M1, M2, M3 dataset and list the object part of part of each dataset to ensure all necessary components are included for a comprehensive analysis. 
+
 <!-- -->
-```
-3.  Data clean 
 
- 
+-   Based on senior project proposal, draft the project objection 
 
-Next meeting date: 1st Jun 2024 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
-3rd Meeting Details 
-
-Attendees: Zhang Chenbin, Zou Jiaxun 
-
-Date: 1st Jun 2024 
-
-Time: 2:30pm – 5:00pm 
-
-Objective: 
-
--   Review the Mini-Challenge 3 provided by the competition and map out key methodological steps needed to address the tasks. 
-
-```{=html}
 <!-- -->
-```
--   Discuss and develop a structured approach to visualize changes in corporate structures and their relationships over time. 
 
-```{=html}
+-   Create the quarto and usethis::github 
+
+## Action items: 
+
+1.  Quarto built 
+
 <!-- -->
-```
--   Outline a plan for creating visual analytics that will identify influential people and companies within the Oceanus business network, especially focusing on those involved in illegal fishing activities. 
 
-```{=html}
+2.  Mission Select (M3)  
+
+## Next meeting date:
+
+25th May 2024 Workshop 
+
+# 4th Meeting Details 
+
+## Attendees:
+
+Zhang Chenbin, Zou Jiaxun 
+
+## Date:
+
+16:30 – 17:30 
+
+## Objective: 
+
+-   Check the M1, M2, M3 dataset and list the object part of part of each dataset to ensure all necessary components are included for a comprehensive analysis. 
+
 <!-- -->
-```
--   Prepare a preliminary analysis framework to identify typical and atypical transactions and understand motives behind them. 
 
-Action Items: 
+-   Based on senior project proposal, draft the project objection 
 
-1.  Methodology for Identifying Influence and Ownership 
-
-```{=html}
 <!-- -->
-```
-2.  Analysis of SouthSeafood Express Corp Network 
 
-```{=html}
+-   Create the quarto and usethis::github 
+
+## Action items: 
+
+1.  Quarto built 
+
 <!-- -->
-```
-3.  Preliminary Data Analysis 
 
-Agenda for Next Meeting: 
+2.  Mission Select (M3)  
 
-1.Deep dive into the preliminary findings from the data analysis. 
+## Next meeting date:
 
-2.Discuss and resolve any issues encountered during the data validation process. 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
-4th Meeting Details 
-
-Attendees: Zhang Chenbin, Zou Jiaxun 
-
-Date: 8th Jun 2024 
-
-Time: 2:30pm – 5:00pm 
-
-Objective: 
-
--   Review the progress on the development of the visual analytics dashboard prototype. 
-
-```{=html}
-<!-- -->
-```
--   Evaluate preliminary findings from the detailed analysis of the data, focusing on identifying patterns and relationships relevant to illegal fishing activities. 
-
-```{=html}
-<!-- -->
-```
--   Address any technical or data-related issues encountered during the validation and analysis phase. 
-
-Action Items: 
-
-1.  Presentation of Preliminary Findings 
-
-```{=html}
-<!-- -->
-```
-2.  Technical Challenges and Solutions 
-
-```{=html}
-<!-- -->
-```
-3.  Further Data Analysis 
+25th May 2024 Workshop 

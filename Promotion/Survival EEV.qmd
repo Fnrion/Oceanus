@@ -1,0 +1,206 @@
+---
+title: "1111"
+---
+```{r}
+
+# Load necessary packages
+pacman::p_load(survival, survminer, readxl, dplyr)
+
+# Load the dataset
+df <- read.csv("WA_Fn-UseC_-HR-Employee-Attrition.csv")
+
+# Convert relevant columns to appropriate data types
+df <- df %>%
+  mutate_if(is.character, as.factor) %>%
+  mutate(YearsAtCompany = as.numeric(as.character(YearsAtCompany)),
+         PromotionEvent = ifelse(YearsSinceLastPromotion == 0, 1, 0))
+
+# Categorize PercentSalaryHike into performance bins
+df <- df %>%
+  mutate(Performance = case_when(
+    PercentSalaryHike >= 11 & PercentSalaryHike <= 11 ~ '1',
+    PercentSalaryHike >= 12 & PercentSalaryHike <= 14 ~ '2',
+    PercentSalaryHike >= 15 & PercentSalaryHike <= 21 ~ '3',
+    PercentSalaryHike >= 22 & PercentSalaryHike <= 25 ~ '4',
+    TRUE ~ 'Unknown'  # Handle cases outside the defined ranges
+  ))
+
+# Convert the new Performance column to a factor
+df$Performance <- as.factor(df$Performance)
+
+# Fit the Cox Proportional Hazards model
+cox_model <- coxph(Surv(YearsAtCompany, PromotionEvent) ~ Performance + Age + Education + JobLevel + TotalWorkingYears + TrainingTimesLastYear + YearsSinceLastPromotion, data = df)
+
+# Summarize the model
+summary(cox_model)
+```
+
+
+
+```{r}
+# Filter data to identify high performers (Performance bin 4)
+high_perf <- df %>% filter(Performance == '4')
+
+# Summary of high performers
+summary(high_perf)
+```
+```{r}
+# Fit the Kaplan-Meier model
+km_fit <- survfit(Surv(YearsAtCompany, PromotionEvent) ~ Performance, data = df)
+
+# Plot the Kaplan-Meier survival curves
+ggsurvplot(km_fit, data = df, pval = TRUE, 
+           risk.table = TRUE, 
+           risk.table.height = 0.25, 
+           risk.table.y.text.col = TRUE,
+           title = "Kaplan-Meier Curves by Job Satisfaction Levels",
+           xlab = "Time to Promotion (Years)", ylab = "Survival Probability",
+           ggtheme = theme_minimal(),
+           font.main = c(16, "bold"),       
+           font.x = c(14, "bold"),          
+           font.y = c(14, "bold"),          
+           font.tickslab = c(12, "plain"),  
+           legend.labs = c("Very Low", "Low", "Medium", "High"),  # Customize legend labels
+           legend.title = "Job Satisfaction",  # Customize legend title
+           palette = c("#E7B800", "#2E9FDF", "#FC4E07", "#00BA38"), # Provide four colors
+           # xlim = c(0,11),
+           width = 10, height = 6)
+```
+
+```{r}
+# Filter the data to include only "High" (4) and "Very Low" (1) job satisfaction levels
+filtered_df <- subset(df, JobInvolvement %in% c(1, 4))
+
+# Fit the Kaplan-Meier model with filtered data
+km_fit <- survfit(Surv(YearsAtCompany, PromotionEvent) ~ JobInvolvement, data = filtered_df)
+
+# Plot the Kaplan-Meier survival curves
+ggsurvplot(km_fit, data = filtered_df, pval = TRUE, 
+           risk.table = TRUE, 
+           risk.table.height = 0.25, 
+           risk.table.y.text.col = TRUE,
+           title = "Kaplan-Meier Curves: High vs. Very Low Job Satisfaction",
+           xlab = "Time to Promotion (Years)", ylab = "Survival Probability",
+           ggtheme = theme_minimal(),
+           font.main = c(16, "bold"),       
+           font.x = c(14, "bold"),          
+           font.y = c(14, "bold"),          
+           font.tickslab = c(12, "plain"),  
+           legend.labs = c("Very Low", "High"),  # Customize legend labels
+           legend.title = "Job Satisfaction",  # Customize legend title
+           palette = c("#FC4E07", "#2E9FDF"),  # Provide two colors
+           xlim = c(0,10),
+           width = 10, height = 6)
+
+```
+
+
+```{r}
+# # Fit a regression model to understand factors affecting Performance
+# # Convert Performance to a numeric variable for regression analysis
+# df$Performance <- as.numeric(as.character(df$Performance))
+# 
+# # Fit a linear regression model
+# performance_model <- lm(Performance ~  PerformanceRating + JobLevel + YearsAtCompany + JobSatisfaction, data = df)
+# 
+# # Summarize the regression model
+# summary(performance_model)
+
+```
+
+```{r}
+# Load necessary packages
+pacman::p_load(survival, survminer, readxl, dplyr)
+
+# Load the dataset
+df <- read.csv("WA_Fn-UseC_-HR-Employee-Attrition.csv")
+
+# Convert relevant columns to appropriate data types
+df <- df %>%
+  mutate_if(is.character, as.factor) %>%
+  mutate(YearsAtCompany = as.numeric(as.character(YearsAtCompany)),
+         PromotionEvent = ifelse(YearsSinceLastPromotion == 0, 1, 0),
+         PromotionEvent = as.numeric(PromotionEvent))
+
+# Categorize PercentSalaryHike into performance bins
+df <- df %>%
+  mutate(Performance = case_when(
+    PercentSalaryHike >= 11 & PercentSalaryHike <= 11 ~ '1',
+    PercentSalaryHike >= 12 & PercentSalaryHike <= 14 ~ '2',
+    PercentSalaryHike >= 15 & PercentSalaryHike <= 21 ~ '3',
+    PercentSalaryHike >= 22 & PercentSalaryHike <= 25 ~ '4',
+    TRUE ~ 'Unknown'  # Handle cases outside the defined ranges
+  ))
+
+# Convert the new Performance column to a factor
+df$Performance <- as.factor(df$Performance)
+
+# Prepare the survival object
+surv_object <- Surv(time = df$YearsAtCompany, event = df$PromotionEvent)
+
+# Fit the Cox Proportional Hazards model
+cox_model <- coxph(surv_object ~ Performance + PercentSalaryHike + YearsAtCompany +  TotalWorkingYears + JobLevel + JobSatisfaction, data = df)
+
+# Summarize the model
+summary(cox_model)
+
+# Plot the survival curves
+ggsurvplot(survfit(cox_model), data = df, conf.int = TRUE)
+
+```
+
+```{r}
+# Cross-tabulate Performance and PromotionEvent
+table(df$Performance, df$PromotionEvent)
+
+# Chi-squared test for independence
+chisq.test(table(df$Performance, df$PromotionEvent))
+
+# Investigate promotions by demographic variables
+table(df$Gender, df$PromotionEvent)
+chisq.test(table(df$Gender, df$PromotionEvent))
+
+table(df$Department, df$PromotionEvent)
+chisq.test(table(df$Department, df$PromotionEvent))
+
+table(df$Department, df$PromotionEvent)
+chisq.test(table(df$Department, df$PromotionEvent))
+
+table(df$JobSatisfaction, df$PromotionEvent)
+chisq.test(table(df$JobSatisfaction, df$PromotionEvent))
+```
+
+```{r}
+# Load necessary packages
+pacman::p_load(dplyr, readxl)
+
+# Read the data
+df <- read.csv("WA_Fn-UseC_-HR-Employee-Attrition.csv")
+
+# Create the Performance variable
+df$Performance <- cut(df$PercentSalaryHike,
+                      breaks = c(-Inf, 11, 14, 21, 25, Inf),
+                      labels = c('1', '2', '3', '4', 'Unknown'),
+                      right = TRUE)
+
+
+# If you want to include other variables in the analysis, for example, JobRole:
+jobrole_promotion_table_high_perf <- table(high_perf$JobRole, high_perf$PromotionEvent)
+
+# Print the table
+print(jobrole_promotion_table_high_perf)
+
+
+```
+
+```{r}
+# Cross-tabulate JobRole and Performance
+jobrole_table <- table(df$JobRole, df$Performance)
+print(jobrole_table)
+
+# Test for association between JobRole and Performance
+jobrole_chisq <- chisq.test(jobrole_table)
+print(jobrole_chisq)
+
+```
+

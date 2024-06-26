@@ -50,8 +50,10 @@ To analyze and visualize business relationships and transaction patterns effecti
 
 **Task 3: Examine Influence Dynamics** 
 
-fhsuaifgdipagfudipasugpI
+Test the centrality to see how the company is built based on the weight point;
+
+Since we require a dynamics influence, a visNetwork with time control will be easy to handle dynamics.
 
 **Task 4: Identify Network Changes Related to SouthSeafood Express Corp** 
 
-FHSUIAGFIDPAGifgisagp
+We want to use a timeline to see how the SounthSeafood Express Corp in different groups affect or affected by other company (not unit.person);

@@ -1,0 +1,128 @@
+---
+title: "Surcical Basis"
+---
+```{r}
+# Load necessary packages
+pacman::p_load(survival, survminer, randomForestSRC, readxl, dplyr)
+
+# Load the dataset
+df <- read.csv("WA_Fn-UseC_-HR-Employee-Attrition.csv")
+
+# Categorize PercentSalaryHike into performance bins
+df <- df %>%
+  mutate(Performance = case_when(
+    PercentSalaryHike >= 11 & PercentSalaryHike <= 11 ~ '1',
+    PercentSalaryHike >= 12 & PercentSalaryHike <= 14 ~ '2',
+    PercentSalaryHike >= 15 & PercentSalaryHike <= 21 ~ '3',
+    PercentSalaryHike >= 22 & PercentSalaryHike <= 25 ~ '4',
+    TRUE ~ 'Unknown'  # Handle cases outside the defined ranges
+  ))
+
+# Filter data based on performance bins
+high_perf <- df %>% filter(Performance == '4')
+good_perf <- df %>% filter(Performance == '3')
+average_perf <- df %>% filter(Performance == '2')
+low_perf <- df %>% filter(Performance == '1')
+
+# Print out the first few rows of each performance category to verify
+head(high_perf)
+head(good_perf)
+head(average_perf)
+head(low_perf)
+
+# Convert YearsAtCompany to numeric
+df$YearsAtCompany <- as.numeric(as.character(df$YearsAtCompany))
+
+# Create the PromotionEvent variable
+df$PromotionEvent <- ifelse(df$YearsSinceLastPromotion == 0, 1, 0)
+
+# Prepare the survival object
+surv_object <- Surv(time = df$YearsAtCompany, event = df$PromotionEvent)
+
+# Fit the Cox PH model
+cox_model <- coxph(surv_object ~ Performance,
+                   TotalWorkingYears,
+                   EnvironmentSatisfaction, data = df)
+
+# Summarize the model
+summary(cox_model)
+
+# Calculate the C-index
+cindex <- concordance(cox_model)
+print(cindex)
+```
+```{r}
+# Load necessary packages
+pacman::p_load(survival, survminer, randomForestSRC, readxl, dplyr, caret)
+
+# Load the dataset
+df <- read.csv("WA_Fn-UseC_-HR-Employee-Attrition.csv")
+
+# Convert relevant columns to appropriate data types
+df <- df %>%
+  mutate_if(is.character, as.factor) %>%
+  mutate(YearsAtCompany = as.numeric(as.character(YearsAtCompany)),
+         PromotionEvent = ifelse(YearsSinceLastPromotion == 0, 1, 0))
+
+# Check for missing values
+print(sum(is.na(df)))
+
+# Categorize PercentSalaryHike into performance bins
+df <- df %>%
+  mutate(Performance = case_when(
+    PercentSalaryHike >= 11 & PercentSalaryHike <= 11 ~ '1',
+    PercentSalaryHike >= 12 & PercentSalaryHike <= 14 ~ '2',
+    PercentSalaryHike >= 15 & PercentSalaryHike <= 21 ~ '3',
+    PercentSalaryHike >= 22 & PercentSalaryHike <= 25 ~ '4',
+    TRUE ~ 'Unknown'  # Handle cases outside the defined ranges
+  ))
+
+# Convert the new Performance column to a factor
+df$Performance <- as.factor(df$Performance)
+
+# Prepare the survival object
+surv_object <- Surv(time = df$YearsAtCompany, event = df$PromotionEvent)
+
+# Fit the Random Survival Forest model
+rsf_model <- rfsrc(Surv(YearsAtCompany, PromotionEvent) ~ Performance, data = df)
+
+# Print the model summary
+print(rsf_model)
+
+
+```
+
+```{r}
+
+# Assume the current year is 2024 for this example
+current_year <- 2024
+
+# Create a new column representing the year an employee started at the company
+df <- df %>%
+  mutate(StartYear = current_year - YearsAtCompany)
+
+# Verify the new column
+print(head(df))
+
+# Prepare the survival object using the new timeline (StartYear)
+# Ensure that the timeline still makes sense for survival analysis (time-to-event format)
+# Here, we revert to YearsAtCompany for survival analysis
+surv_object <- Surv(time = df$StartYear, event = df$PromotionEvent)
+
+# Fit the Weibull AFT model
+weibull_aft_model <- survreg(surv_object ~ Performance,
+                   TotalWorkingYears,
+                   EnvironmentSatisfaction, data = df, dist = "weibull")
+
+# Summarize the model
+summary(weibull_aft_model)
+
+# Calculate the C-index for Weibull AFT model
+aft_pred <- predict(weibull_aft_model, type = "lp")
+cindex_weibull <- survConcordance(surv_object ~ aft_pred)$concordance
+print(cindex_weibull)
+
+
+```
+
+

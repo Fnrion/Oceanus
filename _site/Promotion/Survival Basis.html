@@ -1,0 +1,1271 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.555">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Surcical Basis</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../Picture/Fish.png" alt="" class="navbar-logo">
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-team" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Team</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-team">    
+        <li>
+    <a class="dropdown-item" href="../Team/Member/Member.html">
+ <span class="dropdown-text">Member</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Team/MoM/MoM.html">
+ <span class="dropdown-text">MoM</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-proposal" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Proposal</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-proposal">    
+        <li>
+    <a class="dropdown-item" href="../Proposal/Proposal.html">
+ <span class="dropdown-text">Proposal</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools tools-wide">
+    <a href="https://twitter.com" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-twitter"></i></a>
+    <div class="dropdown">
+      <a href="" title="" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" aria-label=""><i class="bi bi-github"></i></a>
+      <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="https://github.com/Fnrion/Oceanus">
+            Source Code
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="https://bugs.com">
+            Report a Bug
+            </a>
+          </li>
+      </ul>
+    </div>
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Surcical Basis</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load necessary packages</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>pacman<span class="sc">::</span><span class="fu">p_load</span>(survival, survminer, randomForestSRC, readxl, dplyr)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Load the dataset</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"WA_Fn-UseC_-HR-Employee-Attrition.csv"</span>)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Categorize PercentSalaryHike into performance bins</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Performance =</span> <span class="fu">case_when</span>(</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    PercentSalaryHike <span class="sc">&gt;=</span> <span class="dv">11</span> <span class="sc">&amp;</span> PercentSalaryHike <span class="sc">&lt;=</span> <span class="dv">11</span> <span class="sc">~</span> <span class="st">'1'</span>,</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    PercentSalaryHike <span class="sc">&gt;=</span> <span class="dv">12</span> <span class="sc">&amp;</span> PercentSalaryHike <span class="sc">&lt;=</span> <span class="dv">14</span> <span class="sc">~</span> <span class="st">'2'</span>,</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    PercentSalaryHike <span class="sc">&gt;=</span> <span class="dv">15</span> <span class="sc">&amp;</span> PercentSalaryHike <span class="sc">&lt;=</span> <span class="dv">21</span> <span class="sc">~</span> <span class="st">'3'</span>,</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    PercentSalaryHike <span class="sc">&gt;=</span> <span class="dv">22</span> <span class="sc">&amp;</span> PercentSalaryHike <span class="sc">&lt;=</span> <span class="dv">25</span> <span class="sc">~</span> <span class="st">'4'</span>,</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    <span class="cn">TRUE</span> <span class="sc">~</span> <span class="st">'Unknown'</span>  <span class="co"># Handle cases outside the defined ranges</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>  ))</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Filter data based on performance bins</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>high_perf <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span> <span class="fu">filter</span>(Performance <span class="sc">==</span> <span class="st">'4'</span>)</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>good_perf <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span> <span class="fu">filter</span>(Performance <span class="sc">==</span> <span class="st">'3'</span>)</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>average_perf <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span> <span class="fu">filter</span>(Performance <span class="sc">==</span> <span class="st">'2'</span>)</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>low_perf <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span> <span class="fu">filter</span>(Performance <span class="sc">==</span> <span class="st">'1'</span>)</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="co"># Print out the first few rows of each performance category to verify</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(high_perf)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  Age Attrition    BusinessTravel DailyRate             Department
+1  49        No Travel_Frequently       279 Research &amp; Development
+2  30        No     Travel_Rarely      1358 Research &amp; Development
+3  36       Yes     Travel_Rarely      1218                  Sales
+4  32       Yes Travel_Frequently      1125 Research &amp; Development
+5  30        No Travel_Frequently       721 Research &amp; Development
+6  35        No Travel_Frequently       853                  Sales
+  DistanceFromHome Education EducationField EmployeeCount EmployeeNumber
+1                8         1  Life Sciences             1              2
+2               24         1  Life Sciences             1             11
+3                9         4  Life Sciences             1             27
+4               16         1  Life Sciences             1             33
+5                1         2        Medical             1             57
+6               18         5  Life Sciences             1             74
+  EnvironmentSatisfaction Gender HourlyRate JobInvolvement JobLevel
+1                       3   Male         61              2        2
+2                       4   Male         67              3        1
+3                       3   Male         82              2        1
+4                       2 Female         72              1        1
+5                       3 Female         58              3        2
+6                       2   Male         71              3        3
+                JobRole JobSatisfaction MaritalStatus MonthlyIncome MonthlyRate
+1    Research Scientist               2       Married          5130       24907
+2 Laboratory Technician               3      Divorced          2693       13335
+3  Sales Representative               1        Single          3407        6986
+4    Research Scientist               1        Single          3919        4681
+5 Laboratory Technician               4        Single          4011       10781
+6       Sales Executive               1       Married          9069       11031
+  NumCompaniesWorked Over18 OverTime PercentSalaryHike PerformanceRating
+1                  1      Y       No                23                 4
+2                  1      Y       No                22                 4
+3                  7      Y       No                23                 4
+4                  1      Y      Yes                22                 4
+5                  1      Y       No                23                 4
+6                  1      Y       No                22                 4
+  RelationshipSatisfaction StandardHours StockOptionLevel TotalWorkingYears
+1                        4            80                1                10
+2                        2            80                1                 1
+3                        2            80                0                10
+4                        2            80                0                10
+5                        4            80                0                12
+6                        4            80                1                 9
+  TrainingTimesLastYear WorkLifeBalance YearsAtCompany YearsInCurrentRole
+1                     3               3             10                  7
+2                     2               3              1                  0
+3                     4               3              5                  3
+4                     5               3             10                  2
+5                     2               3             12                  8
+6                     3               2              9                  8
+  YearsSinceLastPromotion YearsWithCurrManager Performance
+1                       1                    7           4
+2                       0                    0           4
+3                       0                    3           4
+4                       6                    7           4
+5                       3                    7           4
+6                       1                    8           4</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(good_perf)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  Age Attrition    BusinessTravel DailyRate             Department
+1  37       Yes     Travel_Rarely      1373 Research &amp; Development
+2  59        No     Travel_Rarely      1324 Research &amp; Development
+3  38        No Travel_Frequently       216 Research &amp; Development
+4  31        No     Travel_Rarely       670 Research &amp; Development
+5  53        No     Travel_Rarely      1219                  Sales
+6  24        No        Non-Travel       673 Research &amp; Development
+  DistanceFromHome Education EducationField EmployeeCount EmployeeNumber
+1                2         2          Other             1              4
+2                3         3        Medical             1             10
+3               23         3  Life Sciences             1             12
+4               26         1  Life Sciences             1             16
+5                2         4  Life Sciences             1             23
+6               11         2          Other             1             26
+  EnvironmentSatisfaction Gender HourlyRate JobInvolvement JobLevel
+1                       4   Male         92              2        1
+2                       3 Female         81              4        1
+3                       4   Male         44              2        3
+4                       1   Male         31              3        1
+5                       1 Female         78              2        4
+6                       1 Female         96              4        2
+                 JobRole JobSatisfaction MaritalStatus MonthlyIncome
+1  Laboratory Technician               3        Single          2090
+2  Laboratory Technician               1       Married          2670
+3 Manufacturing Director               3        Single          9526
+4     Research Scientist               3      Divorced          2911
+5                Manager               4       Married         15427
+6 Manufacturing Director               3      Divorced          4011
+  MonthlyRate NumCompaniesWorked Over18 OverTime PercentSalaryHike
+1        2396                  6      Y      Yes                15
+2        9964                  4      Y      Yes                20
+3        8787                  0      Y       No                21
+4       15170                  1      Y       No                17
+5       22021                  2      Y       No                16
+6        8232                  0      Y       No                18
+  PerformanceRating RelationshipSatisfaction StandardHours StockOptionLevel
+1                 3                        2            80                0
+2                 4                        1            80                3
+3                 4                        2            80                0
+4                 3                        4            80                1
+5                 3                        3            80                0
+6                 3                        4            80                1
+  TotalWorkingYears TrainingTimesLastYear WorkLifeBalance YearsAtCompany
+1                 7                     3               3              0
+2                12                     3               2              1
+3                10                     2               3              9
+4                 5                     1               2              5
+5                31                     3               3             25
+6                 5                     5               2              4
+  YearsInCurrentRole YearsSinceLastPromotion YearsWithCurrManager Performance
+1                  0                       0                    0           3
+2                  0                       0                    0           3
+3                  7                       1                    8           3
+4                  2                       4                    3           3
+5                  8                       3                    7           3
+6                  2                       1                    3           3</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(average_perf)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  Age Attrition    BusinessTravel DailyRate             Department
+1  27        No     Travel_Rarely       591 Research &amp; Development
+2  32        No Travel_Frequently      1005 Research &amp; Development
+3  36        No     Travel_Rarely      1299 Research &amp; Development
+4  35        No     Travel_Rarely       809 Research &amp; Development
+5  29        No     Travel_Rarely       153 Research &amp; Development
+6  28       Yes     Travel_Rarely       103 Research &amp; Development
+  DistanceFromHome Education EducationField EmployeeCount EmployeeNumber
+1                2         1        Medical             1              7
+2                2         2  Life Sciences             1              8
+3               27         3        Medical             1             13
+4               16         3        Medical             1             14
+5               15         2  Life Sciences             1             15
+6               24         3  Life Sciences             1             19
+  EnvironmentSatisfaction Gender HourlyRate JobInvolvement JobLevel
+1                       1   Male         40              3        1
+2                       4   Male         79              3        1
+3                       3   Male         94              3        2
+4                       1   Male         84              4        1
+5                       4 Female         49              2        2
+6                       3   Male         50              2        1
+                    JobRole JobSatisfaction MaritalStatus MonthlyIncome
+1     Laboratory Technician               2       Married          3468
+2     Laboratory Technician               4        Single          3068
+3 Healthcare Representative               3       Married          5237
+4     Laboratory Technician               2       Married          2426
+5     Laboratory Technician               3        Single          4193
+6     Laboratory Technician               3        Single          2028
+  MonthlyRate NumCompaniesWorked Over18 OverTime PercentSalaryHike
+1       16632                  9      Y       No                12
+2       11864                  0      Y       No                13
+3       16577                  6      Y       No                13
+4       16479                  0      Y       No                13
+5       12682                  0      Y      Yes                12
+6       12947                  5      Y      Yes                14
+  PerformanceRating RelationshipSatisfaction StandardHours StockOptionLevel
+1                 3                        4            80                1
+2                 3                        3            80                0
+3                 3                        2            80                2
+4                 3                        3            80                1
+5                 3                        4            80                0
+6                 3                        2            80                0
+  TotalWorkingYears TrainingTimesLastYear WorkLifeBalance YearsAtCompany
+1                 6                     3               3              2
+2                 8                     2               2              7
+3                17                     3               2              7
+4                 6                     5               3              5
+5                10                     3               3              9
+6                 6                     4               3              4
+  YearsInCurrentRole YearsSinceLastPromotion YearsWithCurrManager Performance
+1                  2                       2                    2           2
+2                  7                       3                    6           2
+3                  7                       7                    7           2
+4                  4                       0                    3           2
+5                  5                       0                    8           2
+6                  2                       0                    3           2</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(low_perf)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  Age Attrition    BusinessTravel DailyRate             Department
+1  41       Yes     Travel_Rarely      1102                  Sales
+2  33        No Travel_Frequently      1392 Research &amp; Development
+3  34        No     Travel_Rarely      1346 Research &amp; Development
+4  29        No     Travel_Rarely      1389 Research &amp; Development
+5  38        No     Travel_Rarely       371 Research &amp; Development
+6  34        No     Travel_Rarely       419 Research &amp; Development
+  DistanceFromHome Education EducationField EmployeeCount EmployeeNumber
+1                1         2  Life Sciences             1              1
+2                3         4  Life Sciences             1              5
+3               19         2        Medical             1             18
+4               21         4  Life Sciences             1             20
+5                2         3  Life Sciences             1             24
+6                7         4  Life Sciences             1             28
+  EnvironmentSatisfaction Gender HourlyRate JobInvolvement JobLevel
+1                       2 Female         94              3        2
+2                       4 Female         56              3        1
+3                       2   Male         93              3        1
+4                       2 Female         51              4        3
+5                       4   Male         45              3        1
+6                       1 Female         53              3        3
+                 JobRole JobSatisfaction MaritalStatus MonthlyIncome
+1        Sales Executive               4        Single          5993
+2     Research Scientist               3       Married          2909
+3  Laboratory Technician               4      Divorced          2661
+4 Manufacturing Director               1      Divorced          9980
+5     Research Scientist               4        Single          3944
+6      Research Director               2        Single         11994
+  MonthlyRate NumCompaniesWorked Over18 OverTime PercentSalaryHike
+1       19479                  8      Y      Yes                11
+2       23159                  1      Y      Yes                11
+3        8758                  0      Y       No                11
+4       10195                  1      Y       No                11
+5        4306                  5      Y      Yes                11
+6       21293                  0      Y       No                11
+  PerformanceRating RelationshipSatisfaction StandardHours StockOptionLevel
+1                 3                        1            80                0
+2                 3                        3            80                0
+3                 3                        3            80                1
+4                 3                        3            80                1
+5                 3                        3            80                0
+6                 3                        3            80                0
+  TotalWorkingYears TrainingTimesLastYear WorkLifeBalance YearsAtCompany
+1                 8                     0               1              6
+2                 8                     3               3              8
+3                 3                     2               3              2
+4                10                     1               3             10
+5                 6                     3               3              3
+6                13                     4               3             12
+  YearsInCurrentRole YearsSinceLastPromotion YearsWithCurrManager Performance
+1                  4                       0                    5           1
+2                  7                       3                    0           1
+3                  2                       1                    2           1
+4                  9                       8                    8           1
+5                  2                       1                    2           1
+6                  6                       2                   11           1</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert YearsAtCompany to numeric</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>df<span class="sc">$</span>YearsAtCompany <span class="ot">&lt;-</span> <span class="fu">as.numeric</span>(<span class="fu">as.character</span>(df<span class="sc">$</span>YearsAtCompany))</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Create the PromotionEvent variable</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>df<span class="sc">$</span>PromotionEvent <span class="ot">&lt;-</span> <span class="fu">ifelse</span>(df<span class="sc">$</span>YearsSinceLastPromotion <span class="sc">==</span> <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>)</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Prepare the survival object</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>surv_object <span class="ot">&lt;-</span> <span class="fu">Surv</span>(<span class="at">time =</span> df<span class="sc">$</span>YearsAtCompany, <span class="at">event =</span> df<span class="sc">$</span>PromotionEvent)</span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Fit the Cox PH model</span></span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>cox_model <span class="ot">&lt;-</span> <span class="fu">coxph</span>(surv_object <span class="sc">~</span> Performance,</span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>                   TotalWorkingYears,</span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>                   EnvironmentSatisfaction, <span class="at">data =</span> df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in coxph.fit(X, Y, istrat, offset, init, control, weights = weights, :
+Loglik converged before variable 1,2 ; coefficient may be infinite.</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Summarize the model</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(cox_model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Call:
+coxph(formula = surv_object ~ Performance, data = df, weights = TotalWorkingYears, 
+    subset = EnvironmentSatisfaction)
+
+  n= 1470, number of events= 737 
+
+                   coef  exp(coef)   se(coef)      z Pr(&gt;|z|)
+Performance3  2.377e+01  2.105e+10  7.338e+02  0.032    0.974
+Performance4 -1.815e+01  1.305e-08  2.329e+02 -0.078    0.938
+
+             exp(coef) exp(-coef)  lower .95  upper .95
+Performance3 2.105e+10  4.750e-11  0.000e+00        Inf
+Performance4 1.305e-08  7.663e+07 7.499e-207 2.271e+190
+
+Concordance= 0.904  (se = 0.005 )
+Likelihood ratio test= 15923  on 2 df,   p=&lt;2e-16
+Wald test            = 0.01  on 2 df,   p=1
+Score (logrank) test = 19885  on 2 df,   p=&lt;2e-16</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate the C-index</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>cindex <span class="ot">&lt;-</span> <span class="fu">concordance</span>(cox_model)</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(cindex)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Call:
+concordance.coxph(object = cox_model)
+
+n= 1470 
+Concordance= 0.9041 se= 0.005164
+concordant discordant     tied.x     tied.y    tied.xy 
+  34140050          0    8106496          0    7588426 </code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load necessary packages</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>pacman<span class="sc">::</span><span class="fu">p_load</span>(survival, survminer, randomForestSRC, readxl, dplyr, caret)</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Load the dataset</span></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"WA_Fn-UseC_-HR-Employee-Attrition.csv"</span>)</span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert relevant columns to appropriate data types</span></span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span></span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate_if</span>(is.character, as.factor) <span class="sc">%&gt;%</span></span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">YearsAtCompany =</span> <span class="fu">as.numeric</span>(<span class="fu">as.character</span>(YearsAtCompany)),</span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a>         <span class="at">PromotionEvent =</span> <span class="fu">ifelse</span>(YearsSinceLastPromotion <span class="sc">==</span> <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>))</span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Check for missing values</span></span>
+<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">sum</span>(<span class="fu">is.na</span>(df)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Categorize PercentSalaryHike into performance bins</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Performance =</span> <span class="fu">case_when</span>(</span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>    PercentSalaryHike <span class="sc">&gt;=</span> <span class="dv">11</span> <span class="sc">&amp;</span> PercentSalaryHike <span class="sc">&lt;=</span> <span class="dv">11</span> <span class="sc">~</span> <span class="st">'1'</span>,</span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>    PercentSalaryHike <span class="sc">&gt;=</span> <span class="dv">12</span> <span class="sc">&amp;</span> PercentSalaryHike <span class="sc">&lt;=</span> <span class="dv">14</span> <span class="sc">~</span> <span class="st">'2'</span>,</span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>    PercentSalaryHike <span class="sc">&gt;=</span> <span class="dv">15</span> <span class="sc">&amp;</span> PercentSalaryHike <span class="sc">&lt;=</span> <span class="dv">21</span> <span class="sc">~</span> <span class="st">'3'</span>,</span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>    PercentSalaryHike <span class="sc">&gt;=</span> <span class="dv">22</span> <span class="sc">&amp;</span> PercentSalaryHike <span class="sc">&lt;=</span> <span class="dv">25</span> <span class="sc">~</span> <span class="st">'4'</span>,</span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>    <span class="cn">TRUE</span> <span class="sc">~</span> <span class="st">'Unknown'</span>  <span class="co"># Handle cases outside the defined ranges</span></span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a>  ))</span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert the new Performance column to a factor</span></span>
+<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a>df<span class="sc">$</span>Performance <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(df<span class="sc">$</span>Performance)</span>
+<span id="cb17-13"><a href="#cb17-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-14"><a href="#cb17-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Prepare the survival object</span></span>
+<span id="cb17-15"><a href="#cb17-15" aria-hidden="true" tabindex="-1"></a>surv_object <span class="ot">&lt;-</span> <span class="fu">Surv</span>(<span class="at">time =</span> df<span class="sc">$</span>YearsAtCompany, <span class="at">event =</span> df<span class="sc">$</span>PromotionEvent)</span>
+<span id="cb17-16"><a href="#cb17-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-17"><a href="#cb17-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Fit the Random Survival Forest model</span></span>
+<span id="cb17-18"><a href="#cb17-18" aria-hidden="true" tabindex="-1"></a>rsf_model <span class="ot">&lt;-</span> <span class="fu">rfsrc</span>(<span class="fu">Surv</span>(YearsAtCompany, PromotionEvent) <span class="sc">~</span> Performance, <span class="at">data =</span> df)</span>
+<span id="cb17-19"><a href="#cb17-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-20"><a href="#cb17-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Print the model summary</span></span>
+<span id="cb17-21"><a href="#cb17-21" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(rsf_model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>                         Sample size: 1470
+                    Number of deaths: 581
+                     Number of trees: 500
+           Forest terminal node size: 15
+       Average no. of terminal nodes: 4
+No. of variables tried at each split: 1
+              Total no. of variables: 1
+       Resampling used to grow trees: swor
+    Resample size used to grow trees: 929
+                            Analysis: RSF
+                              Family: surv
+                      Splitting rule: logrank *random*
+       Number of random split points: 10
+                          (OOB) CRPS: 0.21032662
+   (OOB) Requested performance error: 0.55842058</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Assume the current year is 2024 for this example</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>current_year <span class="ot">&lt;-</span> <span class="dv">2024</span></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a new column representing the year an employee started at the company</span></span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span></span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">StartYear =</span> current_year <span class="sc">-</span> YearsAtCompany)</span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Verify the new column</span></span>
+<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">head</span>(df))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  Age Attrition    BusinessTravel DailyRate             Department
+1  41       Yes     Travel_Rarely      1102                  Sales
+2  49        No Travel_Frequently       279 Research &amp; Development
+3  37       Yes     Travel_Rarely      1373 Research &amp; Development
+4  33        No Travel_Frequently      1392 Research &amp; Development
+5  27        No     Travel_Rarely       591 Research &amp; Development
+6  32        No Travel_Frequently      1005 Research &amp; Development
+  DistanceFromHome Education EducationField EmployeeCount EmployeeNumber
+1                1         2  Life Sciences             1              1
+2                8         1  Life Sciences             1              2
+3                2         2          Other             1              4
+4                3         4  Life Sciences             1              5
+5                2         1        Medical             1              7
+6                2         2  Life Sciences             1              8
+  EnvironmentSatisfaction Gender HourlyRate JobInvolvement JobLevel
+1                       2 Female         94              3        2
+2                       3   Male         61              2        2
+3                       4   Male         92              2        1
+4                       4 Female         56              3        1
+5                       1   Male         40              3        1
+6                       4   Male         79              3        1
+                JobRole JobSatisfaction MaritalStatus MonthlyIncome MonthlyRate
+1       Sales Executive               4        Single          5993       19479
+2    Research Scientist               2       Married          5130       24907
+3 Laboratory Technician               3        Single          2090        2396
+4    Research Scientist               3       Married          2909       23159
+5 Laboratory Technician               2       Married          3468       16632
+6 Laboratory Technician               4        Single          3068       11864
+  NumCompaniesWorked Over18 OverTime PercentSalaryHike PerformanceRating
+1                  8      Y      Yes                11                 3
+2                  1      Y       No                23                 4
+3                  6      Y      Yes                15                 3
+4                  1      Y      Yes                11                 3
+5                  9      Y       No                12                 3
+6                  0      Y       No                13                 3
+  RelationshipSatisfaction StandardHours StockOptionLevel TotalWorkingYears
+1                        1            80                0                 8
+2                        4            80                1                10
+3                        2            80                0                 7
+4                        3            80                0                 8
+5                        4            80                1                 6
+6                        3            80                0                 8
+  TrainingTimesLastYear WorkLifeBalance YearsAtCompany YearsInCurrentRole
+1                     0               1              6                  4
+2                     3               3             10                  7
+3                     3               3              0                  0
+4                     3               3              8                  7
+5                     3               3              2                  2
+6                     2               2              7                  7
+  YearsSinceLastPromotion YearsWithCurrManager PromotionEvent Performance
+1                       0                    5              1           1
+2                       1                    7              0           4
+3                       0                    0              1           3
+4                       3                    0              0           1
+5                       2                    2              0           2
+6                       3                    6              0           2
+  StartYear
+1      2018
+2      2014
+3      2024
+4      2016
+5      2022
+6      2017</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Prepare the survival object using the new timeline (StartYear)</span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Ensure that the timeline still makes sense for survival analysis (time-to-event format)</span></span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Here, we revert to YearsAtCompany for survival analysis</span></span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>surv_object <span class="ot">&lt;-</span> <span class="fu">Surv</span>(<span class="at">time =</span> df<span class="sc">$</span>StartYear, <span class="at">event =</span> df<span class="sc">$</span>PromotionEvent)</span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Fit the Weibull AFT model</span></span>
+<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a>weibull_aft_model <span class="ot">&lt;-</span> <span class="fu">survreg</span>(surv_object <span class="sc">~</span> Performance,</span>
+<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a>                   TotalWorkingYears,</span>
+<span id="cb21-9"><a href="#cb21-9" aria-hidden="true" tabindex="-1"></a>                   EnvironmentSatisfaction, <span class="at">data =</span> df, <span class="at">dist =</span> <span class="st">"weibull"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in survreg.fit(X, Y, weights, offset, init = init, controlvals =
+control, : Ran out of iterations and did not converge</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Summarize the model</span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(weibull_aft_model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+survreg(formula = surv_object ~ Performance, data = df, weights = TotalWorkingYears, 
+    subset = EnvironmentSatisfaction, dist = "weibull")
+                 Value Std. Error         z       p
+(Intercept)   7.61e+00   2.62e-06  2.90e+06 &lt; 2e-16
+Performance2        NA   0.00e+00        NA      NA
+Performance3  2.96e-03   3.42e-06  8.66e+02 &lt; 2e-16
+Performance4 -6.62e-04   1.06e-04 -6.26e+00 3.8e-10
+Log(scale)   -8.66e+00   0.00e+00      -Inf &lt; 2e-16
+
+Scale= 0.000173 
+
+Weibull distribution
+Loglik(model)= -1272.3   Loglik(intercept only)= -13418.2
+    Chisq= 24291.74 on 3 degrees of freedom, p= 0 
+Number of Newton-Raphson Iterations: 30 
+n= 1470 </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate the C-index for Weibull AFT model</span></span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>aft_pred <span class="ot">&lt;-</span> <span class="fu">predict</span>(weibull_aft_model, <span class="at">type =</span> <span class="st">"lp"</span>)</span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>cindex_weibull <span class="ot">&lt;-</span> <span class="fu">survConcordance</span>(surv_object <span class="sc">~</span> aft_pred)<span class="sc">$</span>concordance</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: 'survConcordance' is deprecated.
+Use 'concordance' instead.
+See help("Deprecated")</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: 'survConcordance.fit' is deprecated.
+Use 'concordancefit' instead.
+See help("Deprecated")</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(cindex_weibull)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>concordant 
+ 0.5013664 </code></pre>
+</div>
+</div>
+
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
