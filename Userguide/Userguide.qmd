@@ -3,12 +3,26 @@ title: "Userguide"
 format: revealjs
 ---
 
-## Getting up
+## Dataset Search
 
-- Turn off alarm
-- Get out of bed
+![](/Picture/Picture 2.png)
 
-## Going to sleep
+## Edges and Nodes
 
-- Get in bed
-- Count sheep
+![](/Picture/Picture 3.png)
+
+## Node Connection
+
+![](/Picture/Picture 4.png)
+
+## NetworkGraph
+
+![](/Picture/Picture 5.png)
+
+## VisNetwork
+
+![](/Picture/Picture 6.png)
+
+## SouthSeafood Express Corp Relationship Network
+
+![](/Picture/Picture 1.png)
