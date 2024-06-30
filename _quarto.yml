@@ -16,10 +16,15 @@ website:
         menu: 
           - text: "Proposal"
             href: "Proposal/Proposal.html"
-      - text: "Poster"
-        href: "https://smu.sharepoint.com/:i:/r/teams/VIsualgroupproject/Shared%20Documents/General/it%27s%20official%20(22.39%20x%2033.11%20%E8%8B%B1%E5%AF%B8)%20(1).jpg?csf=1&web=1&e=f4zz74"
       - text: "Shiny"
-        href: "https://jiaxunzou.shinyapps.io/ShinyDemo/"
+
+        menu: 
+          - text: "Poster"
+            href: "https://smu.sharepoint.com/:i:/r/teams/VIsualgroupproject/Shared%20Documents/General/it%27s%20official%20(22.39%20x%2033.11%20%E8%8B%B1%E5%AF%B8)%20(1).jpg?csf=1&web=1&e=f4zz74"
+          - text: "Application"
+            href: "https://jiaxunzou.shinyapps.io/ShinyDemo/"
+          - text: "Userguide"
+            href: "Userguide/Userguide.html"
 
 
     right:
